@@ -1,0 +1,31 @@
+.transactionHistory {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  width: 800px;
+  border-collapse: collapse;
+  color: grey;
+  background-color: #fff;
+}
+.gorizontalLine:nth-child(even) {
+  background-color: #ecf1f4;
+}
+.gorizontalLine:nth-child(odd) {
+  background-color: #fff;
+}
+
+.title {
+  padding: 10px 0 10px;
+  border: 1px solid #fff;
+  background-color: #00bcd5;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.item {
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 10px 0 10px;
+}
