@@ -6,19 +6,10 @@ export default function FriendList({ friends }) {
   return (
     <ul className={css.friendList}>
       {friends.map(({ id, avatar, name, isOnline }) => (
-        <Friend
-          key={id}
-          avatar={avatar}
-          name={name}
-          color={getColor(isOnline)}
-        />
+        <Friend key={id} avatar={avatar} name={name} isOnline={isOnline} />
       ))}
     </ul>
   );
-}
-
-function getColor(boolean) {
-  return boolean ? "green" : "red";
 }
 
 FriendList.propTypes = {

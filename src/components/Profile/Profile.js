@@ -1,15 +1,8 @@
 import PropTypes from "prop-types";
 import css from "./Profile.module.css";
 
-export default function Profile({
-  avatar,
-  name,
-  tag,
-  location,
-  followers,
-  views,
-  likes,
-}) {
+export default function Profile({ avatar, name, tag, location, stats }) {
+  console.log(stats.followers);
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -22,15 +15,15 @@ export default function Profile({
       <ul className={css.stats}>
         <li>
           <span className={css.lable}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
+          <span className={css.quantity}>{stats.followers}</span>
         </li>
         <li>
           <span className={css.lable}>Views</span>
-          <span className={css.quantity}>{views}</span>
+          <span className={css.quantity}>{stats.views}</span>
         </li>
         <li>
           <span className={css.lable}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
+          <span className={css.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -42,7 +35,4 @@ Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
 };
